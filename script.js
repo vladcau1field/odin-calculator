@@ -29,3 +29,7 @@ function operate(firstNumber, operator, anotherNumber) {
     return divide(firstNumber, anotherNumber);
   }
 }
+
+const displayDigits = document.querySelector("#display");
+
+displayDigits.textContent = "hello";
