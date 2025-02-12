@@ -6,49 +6,72 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 #center {
   display: flex;
   justify-content: center;
-  text-align: center;
+  margin-top: 6rem;
 }
 #container {
-  width: 60em;
-  height: 70em;
+  width: 60rem;
+  height: 70rem;
   background-color: #c1e156;
-  border-radius: 1em;
+  border-radius: 1rem;
   display: flex;
-  justify-content: space-around;
-  margin-top: 2em;
+  justify-content: space-between;
+  /* margin-top: auto; */
   flex-direction: column;
 }
 
 #display {
-  width: 55em;
-  height: 15em;
+  width: 55rem;
+  height: 15rem;
   background-color: #b3e8c2;
   align-self: center;
-  justify-content: flex-start;
-  margin-bottom: 7em;
+  margin-top: 1.5em;
   border: 0.1em solid #a3bcb8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #334038;
+  font-weight: bold;
 }
 
 #buttonsContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 60em;
+  align-self: center;
+  margin: 3rem;
+  width: 50rem;
+  height: 50rem;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .buttons {
-  width: 4.1em;
-  height: 4.1em;
-  margin: 1em;
+  width: 7rem;
+  height: 7rem;
+  margin: 0.2rem;
+  padding: 2.5em;
+  border: 0.1px solid #b39189;
+  background: #f6e0d9;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia;
+  font-size: 2.1rem;
+  box-shadow: px 0px black, -1em 0 0.4em olive;
+}
 
-  background: #000;
+.buttons:hover {
+  background-color: #dcc2bb;
 }
