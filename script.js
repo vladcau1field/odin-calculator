@@ -40,3 +40,15 @@ numbers.forEach((number) => {
     }
   });
 });
+
+const addBtn = document.querySelector("#add");
+
+addBtn.addEventListener("click", () => {
+  let before = displayDigits.textContent;
+  console.log(before);
+  if (displayDigits.textContent != "") {
+    if (displayDigits.textContent.length < 10) {
+      displayDigits.textContent = "+";
+    }
+  }
+});
