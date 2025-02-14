@@ -14,9 +14,9 @@ function divide(numberA, numberB) {
   return numberA / numberB;
 }
 
-let firstNumber;
-let operator;
-let anotherNumber;
+let firstNumber = null;
+let operator = null;
+let anotherNumber = null;
 
 function operate(firstNumber, operator, anotherNumber) {
   if (operator == "+") {
@@ -32,7 +32,11 @@ function operate(firstNumber, operator, anotherNumber) {
 
 const displayDigits = document.querySelector("#display");
 const numbers = document.querySelectorAll(".digits");
+const currentDigits = document.querySelector("#currentDigits");
+const addBtn = document.querySelector("#add");
+const equalsBtn = document.querySelector("#equals");
 
+// numbers
 numbers.forEach((number) => {
   number.addEventListener("click", () => {
     if (displayDigits.textContent.length < 10) {
@@ -41,14 +45,11 @@ numbers.forEach((number) => {
   });
 });
 
-const addBtn = document.querySelector("#add");
-
+// +
 addBtn.addEventListener("click", () => {
-  let before = displayDigits.textContent;
-  console.log(before);
   if (displayDigits.textContent != "") {
-    if (displayDigits.textContent.length < 10) {
-      displayDigits.textContent = "+";
-    }
+    firstNumber = parseFloat(displayDigits.textContent);
+    operator = "+";
+    displayDigits.textContent = "";
   }
 });
