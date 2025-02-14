@@ -2,7 +2,7 @@ function add(numberA, numberB) {
   return numberA + numberB;
 }
 
-function subsctract(numberA, numberB) {
+function subtract(numberA, numberB) {
   return numberA - numberB;
 }
 
@@ -22,7 +22,7 @@ function operate(firstNumber, operator, anotherNumber) {
   if (operator == "+") {
     return add(firstNumber, anotherNumber);
   } else if (operator == "-") {
-    return subsctract(firstNumber, anotherNumber);
+    return subtract(firstNumber, anotherNumber);
   } else if (operator == "*") {
     return multiply(firstNumber, anotherNumber);
   } else if (operator == "/") {
@@ -36,8 +36,9 @@ const currentDigits = document.querySelector("#currentDigits");
 const addBtn = document.querySelector("#add");
 const equalsBtn = document.querySelector("#equals");
 const clearBtn = document.querySelector("#clear");
-const substrBtn = document.querySelector("#substract");
+const subtrBtn = document.querySelector("#subtract");
 const multiplyBtn = document.querySelector("#multiply");
+const divideBtn = document.querySelector("#divide");
 
 // numbers
 numbers.forEach((number) => {
@@ -72,7 +73,7 @@ clearBtn.addEventListener("click", () => {
   anotherNumber = null;
 });
 
-substrBtn.addEventListener("click", () => {
+subtrBtn.addEventListener("click", () => {
   if (displayDigits.textContent != "") {
     firstNumber = parseFloat(displayDigits.textContent);
     operator = "-";
@@ -84,6 +85,14 @@ multiplyBtn.addEventListener("click", () => {
   if (displayDigits.textContent != "") {
     firstNumber = parseFloat(displayDigits.textContent);
     operator = "*";
+    displayDigits.textContent = "";
+  }
+});
+
+divideBtn.addEventListener("click", () => {
+  if (displayDigits.textContent != "") {
+    firstNumber = parseFloat(displayDigits.textContent);
+    operator = "/";
     displayDigits.textContent = "";
   }
 });
