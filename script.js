@@ -37,6 +37,7 @@ const addBtn = document.querySelector("#add");
 const equalsBtn = document.querySelector("#equals");
 const clearBtn = document.querySelector("#clear");
 const substrBtn = document.querySelector("#substract");
+const multiplyBtn = document.querySelector("#multiply");
 
 // numbers
 numbers.forEach((number) => {
@@ -75,6 +76,14 @@ substrBtn.addEventListener("click", () => {
   if (displayDigits.textContent != "") {
     firstNumber = parseFloat(displayDigits.textContent);
     operator = "-";
+    displayDigits.textContent = "";
+  }
+});
+
+multiplyBtn.addEventListener("click", () => {
+  if (displayDigits.textContent != "") {
+    firstNumber = parseFloat(displayDigits.textContent);
+    operator = "*";
     displayDigits.textContent = "";
   }
 });
