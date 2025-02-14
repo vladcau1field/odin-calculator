@@ -29,6 +29,7 @@ html {
   /* margin-top: auto; */
   flex-direction: column;
   box-shadow: 0px 0px 3rem 0.3rem #4141416e;
+  padding-bottom: rem;
 }
 
 #currentDigits {
@@ -43,8 +44,8 @@ html {
 }
 
 #display {
-  width: 55rem;
-  height: 15rem;
+  width: 52rem;
+  height: 40rem;
   background-color: #b3e8c2;
   align-self: center;
   margin-top: 1.5em;
