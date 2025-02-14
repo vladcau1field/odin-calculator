@@ -35,6 +35,7 @@ const numbers = document.querySelectorAll(".digits");
 const currentDigits = document.querySelector("#currentDigits");
 const addBtn = document.querySelector("#add");
 const equalsBtn = document.querySelector("#equals");
+const clearBtn = document.querySelector("#clear");
 
 // numbers
 numbers.forEach((number) => {
