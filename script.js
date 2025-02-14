@@ -53,3 +53,11 @@ addBtn.addEventListener("click", () => {
     displayDigits.textContent = "";
   }
 });
+
+equalsBtn.addEventListener("click", () => {
+  if (firstNumber != null && operator != null) {
+    anotherNumber = parseFloat(displayDigits.textContent);
+    console.log(operate(firstNumber, operator, anotherNumber));
+    displayDigits.textContent = operate(firstNumber, operator, anotherNumber);
+  }
+});
