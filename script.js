@@ -62,3 +62,10 @@ equalsBtn.addEventListener("click", () => {
     displayDigits.textContent = operate(firstNumber, operator, anotherNumber);
   }
 });
+
+clearBtn.addEventListener("click", () => {
+  displayDigits.textContent = "";
+  firstNumber = null;
+  operator = null;
+  anotherNumber = null;
+});
