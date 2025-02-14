@@ -36,6 +36,7 @@ const currentDigits = document.querySelector("#currentDigits");
 const addBtn = document.querySelector("#add");
 const equalsBtn = document.querySelector("#equals");
 const clearBtn = document.querySelector("#clear");
+const substrBtn = document.querySelector("#substract");
 
 // numbers
 numbers.forEach((number) => {
@@ -68,4 +69,12 @@ clearBtn.addEventListener("click", () => {
   firstNumber = null;
   operator = null;
   anotherNumber = null;
+});
+
+substrBtn.addEventListener("click", () => {
+  if (displayDigits.textContent != "") {
+    firstNumber = parseFloat(displayDigits.textContent);
+    operator = "-";
+    displayDigits.textContent = "";
+  }
 });
