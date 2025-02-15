@@ -11,6 +11,9 @@ function multiply(numberA, numberB) {
 }
 
 function divide(numberA, numberB) {
+  if (numberB === 0) {
+    return "wtf?";
+  }
   return numberA / numberB;
 }
 
@@ -64,8 +67,10 @@ addBtn.addEventListener("click", () => {
 equalsBtn.addEventListener("click", () => {
   if (firstNumber != null && operator != null) {
     anotherNumber = parseFloat(displayDigits.textContent);
-    console.log(operate(firstNumber, operator, anotherNumber));
-    displayDigits.textContent = operate(firstNumber, operator, anotherNumber);
+    let result = operate(firstNumber, operator, anotherNumber);
+    displayDigits.textContent = result;
+    firstNumber = result;
+    operator = null;
   }
 });
 
