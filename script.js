@@ -70,6 +70,8 @@ function setOperator(newOperator) {
 
   operator = newOperator;
   resetScreen = true;
+
+  displayDigits.textContent = firstNumber + " " + operator;
 }
 
 addBtn.addEventListener("click", () => setOperator("+"));
